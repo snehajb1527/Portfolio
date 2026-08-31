@@ -127,12 +127,15 @@
   .info-row .label{color:var(--muted);}
 
   /* SKILLS */
-  .skill-pills{display:flex;flex-wrap:wrap;gap:12px;}
-  .pill{
-    background:var(--card);border:1px solid var(--border);
-    padding:10px 16px;border-radius:8px;font-size:.85rem;
-    display:flex;align-items:center;gap:8px;
-  }
+ .skill-pills{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;}
+.pill{
+  background:var(--card);border:1px solid var(--border);
+  padding:22px 16px;border-radius:12px;font-size:.9rem;font-weight:600;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;text-align:center;
+}
+.pill{font-size:0;}
+.pill::before{font-size:1rem;}
 
   /* PROJECTS */
   .project-card{
